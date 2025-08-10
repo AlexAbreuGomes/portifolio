@@ -26,15 +26,24 @@
 </head>
 
 <body>
+  <a href="#sobre" class="skip-link">Pular para conteúdo</a>
   <header>
     <img src="https://lh3.googleusercontent.com/a/ACg8ocLI4HwDyEu4UoKtKdDBvhV9cSCW2m-B9Nsj4lIZTl0UK_8GMyNB=s288-c-no"
       alt="Foto de Alex de Abreu" class="profile-pic" loading="lazy" />
     <h1>Alex de Abreu</h1>
     <h3 class="subtitulo">Desenvolvedor de Sistemas | Data Engineer Jr. | Entusiasta de Tecnologia</h3>
   </header>
-
-  <main>
-    <section aria-label="Sobre mim">
+  <nav class="site-nav" aria-label="Navegação principal">
+    <ul class="nav-links">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#tecnologias">Tecnologias</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="cv.html" target="_blank" rel="noopener" aria-label="Abrir currículo em nova aba">Currículo</a></li>
+    </ul>
+  </nav>
+  <main class="reveal">
+    <section id="sobre" aria-label="Sobre mim">
       <h2>Sobre mim</h2>
       <p>
         Olá! Sou Alex, tenho 29 anos, natural de São Paulo e atualmente resido no Rio Grande do Norte. Minha trajetória
@@ -55,24 +64,80 @@
       </p>
     </section>
 
-    <section aria-label="Tecnologias">
+    <section id="tecnologias" aria-label="Tecnologias">
       <h2>Tecnologias</h2>
-      <div class="skills-grid">
-        <div class="skill"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
-        <div class="skill"><i class="fab fa-html5"></i><span>HTML</span></div>
-        <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-        <div class="skill"><i class="fab fa-python"></i><span>Python</span></div>
-        <div class="skill"><i class="fas fa-project-diagram"></i><span>Airflow</span></div>
-        <div class="skill"><i class="fas fa-database"></i><span>SQL</span></div>
-        <div class="skill"><i class="fas fa-database"></i><span>PostgreSQL</span></div>
-        <div class="skill"><i class="fas fa-cogs"></i><span>Odoo</span></div>
-        <div class="skill"><i class="fab fa-git-alt"></i><span>Git & GitHub</span></div>
+      <div class="skills-categories">
+        <div class="skills-category">
+          <h3 class="skills-cat-title">Linguagens</h3>
+          <div class="skills-grid" role="list">
+            <div class="skill" tabindex="0" role="listitem"
+              aria-label="Python nível 4 de 5. Scripts, ETL, análise e automação"
+              data-tooltip="Scripts, ETL, análise e automação" style="--level:0.8" data-rating="4"><i
+                class="fab fa-python"></i><span>Python</span><span class="skill-bar"></span><span class="skill-rating"
+                aria-hidden="true">4/5</span></div>
+            <div class="skill" tabindex="0" role="listitem"
+              aria-label="JavaScript nível 4 de 5. Lógica de front e scripts utilitários"
+              data-tooltip="Javascript para lógica de front e scripts utilitários" style="--level:0.75" data-rating="4">
+              <i class="fab fa-js-square"></i><span>JavaScript</span><span class="skill-bar"></span><span
+                class="skill-rating" aria-hidden="true">4/5</span>
+            </div>
+            <div class="skill" tabindex="0" role="listitem" aria-label="HTML nível 5 de 5. HTML semântico e acessível"
+              data-tooltip="HTML semântico e acessível" style="--level:0.9" data-rating="5"><i
+                class="fab fa-html5"></i><span>HTML</span><span class="skill-bar"></span><span class="skill-rating"
+                aria-hidden="true">5/5</span></div>
+            <div class="skill" tabindex="0" role="listitem"
+              aria-label="CSS nível 4 de 5. Layout responsivo e design system"
+              data-tooltip="Layout responsivo e design system simples" style="--level:0.85" data-rating="4"><i
+                class="fab fa-css3-alt"></i><span>CSS</span><span class="skill-bar"></span><span class="skill-rating"
+                aria-hidden="true">4/5</span></div>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3 class="skills-cat-title">Dados</h3>
+          <div class="skills-grid" role="list">
+            <div class="skill" tabindex="0" role="listitem"
+              aria-label="SQL nível 4 de 5. Consultas otimizadas e modelagem relacional"
+              data-tooltip="Consultas otimizadas e modelagem relacional" style="--level:0.8" data-rating="4"><i
+                class="fas fa-database"></i><span>SQL</span><span class="skill-bar"></span><span class="skill-rating"
+                aria-hidden="true">4/5</span></div>
+            <div class="skill" tabindex="0" role="listitem"
+              aria-label="PostgreSQL nível 3 de 5. Administração básica e tuning inicial"
+              data-tooltip="Administração básica e tuning inicial" style="--level:0.7" data-rating="3"><i
+                class="fas fa-database"></i><span>PostgreSQL</span><span class="skill-bar"></span><span
+                class="skill-rating" aria-hidden="true">3/5</span></div>
+            <div class="skill" tabindex="0" role="listitem"
+              aria-label="Airflow nível 3 de 5. Orquestração de pipelines e monitoramento"
+              data-tooltip="Orquestração de pipelines e monitoramento" style="--level:0.65" data-rating="3"><i
+                class="fas fa-project-diagram"></i><span>Airflow</span><span class="skill-bar"></span><span
+                class="skill-rating" aria-hidden="true">3/5</span></div>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3 class="skills-cat-title">Back-end / ERP</h3>
+          <div class="skills-grid" role="list">
+            <div class="skill" tabindex="0" role="listitem"
+              aria-label="Odoo nível 3 de 5. Customização e suporte a módulos"
+              data-tooltip="Customização e suporte a módulos" style="--level:0.6" data-rating="3"><i
+                class="fas fa-cogs"></i><span>Odoo</span><span class="skill-bar"></span><span class="skill-rating"
+                aria-hidden="true">3/5</span></div>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3 class="skills-cat-title">Ferramentas</h3>
+          <div class="skills-grid" role="list">
+            <div class="skill" tabindex="0" role="listitem"
+              aria-label="Git e GitHub nível 4 de 5. Fluxo Git, versionamento e colaboração"
+              data-tooltip="Fluxo Git, versionamento e colaboração" style="--level:0.85" data-rating="4"><i
+                class="fab fa-git-alt"></i><span>Git & GitHub</span><span class="skill-bar"></span><span
+                class="skill-rating" aria-hidden="true">4/5</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section aria-label="Contato">
+    <section id="contato" aria-label="Contato">
       <h2>Contato</h2>
-      <p>Sinta-se à vontade para entrar em contato comigo pelas redes sociais:</p>
+      <p>Sinta-se à vontade para entrar em contato comigo pelas redes sociais.</p>
       <div class="social">
         <a class="button-link" href="mailto:alex.abreu.softwaredeveloper@gmail.com" aria-label="Enviar email para Alex">
           <i class="fas fa-envelope"></i> Email
@@ -88,49 +153,77 @@
       </div>
     </section>
 
-    <section aria-label="Projetos">
+    <section id="projetos" aria-label="Projetos" class="reveal">
       <h2>Projetos</h2>
       <div class="projects">
-        <a class="project-card"
+        <a class="project-card featured reveal"
           href="https://github.com/AlexAbreuGomes/app-senac-aprendizagem/tree/main/app-senac-aprendizagem"
           target="_blank" rel="noopener" aria-label="Ver código do projeto Conecta Aprendiz no GitHub">
+          <div class="feature-badge" aria-hidden="true">Destaque</div>
           <h3>Conecta Aprendiz</h3>
           <p>Aplicativo criado com uma equipe de desenvolvedores para conectar os novos aprendizes, com dicas,
             esclarecimentos de dúvidas e um quiz interativo com finalidade de promover o aprendizado.</p>
+          <div class="project-tags">
+            <span class="badge">Mobile</span>
+            <span class="badge">Educação</span>
+            <span class="badge">Quiz</span>
+          </div>
         </a>
-        <a class="project-card" href="https://github.com/AlexAbreuGomes/meu-acompanhante-seguro/tree/developer"
+        <a class="project-card reveal" href="https://github.com/AlexAbreuGomes/meu-acompanhante-seguro/tree/developer"
           target="_blank" rel="noopener" aria-label="Ver código do projeto Meu Acompanhante Seguro no GitHub">
           <h3>Meu Acompanhante Seguro</h3>
           <p>Site voltado a auxiliar pessoas que estão acompanhando outras em hospitais, avisando sobre os perigos
             invisíveis dentro do ambiente hospitalar.</p>
+          <div class="project-tags">
+            <span class="badge">Web</span>
+            <span class="badge">HTML/CSS</span>
+            <span class="badge">Acessibilidade</span>
+          </div>
         </a>
-        <a class="project-card" href="https://github.com/AlexAbreuGomes/parkingsystem/tree/main" target="_blank"
+        <a class="project-card reveal" href="https://github.com/AlexAbreuGomes/parkingsystem/tree/main" target="_blank"
           rel="noopener" aria-label="Ver código do projeto Parking System no GitHub">
           <h3>Parking System</h3>
           <p>Sistema para desktop para gerenciamento de estacionamentos, permitindo o controle de vagas e o registro de
             entradas e saídas de veículos.</p>
+          <div class="project-tags">
+            <span class="badge">Desktop</span>
+            <span class="badge">CRUD</span>
+            <span class="badge">Gestão</span>
+          </div>
         </a>
-        <a class="project-card" href="https://github.com/AlexAbreuGomes/projeto-x" target="_blank" rel="noopener"
+        <a class="project-card reveal" href="https://github.com/AlexAbreuGomes/projeto-x" target="_blank" rel="noopener"
           aria-label="Ver código do projeto Projeto X no GitHub">
           <h3>Projeto X</h3>
           <p>Este projeto é uma aplicação de e-commerce construída com React Native (para o front-end) e uma API
             hospedada no Vercel (para o back-end com node.js). A aplicação permite que usuários visualizem produtos,
             naveguem por categorias. além da página de administração onde realizam outras operações comuns em lojas
             virtuais, como adicionar e excluir produtos e categorias.</p>
+          <div class="project-tags">
+            <span class="badge">E-commerce</span>
+            <span class="badge">React Native</span>
+            <span class="badge">API</span>
+          </div>
         </a>
-        <a class="project-card" href="https://github.com/AlexAbreuGomes/data_science_do_zero" target="_blank"
+        <a class="project-card reveal" href="https://github.com/AlexAbreuGomes/data_science_do_zero" target="_blank"
           rel="noopener" aria-label="Ver código do projeto Anotações Data Science do Zero no GitHub">
           <h3>Anotações Data Science do Zero</h3>
           <p>Repositório dedicado a gravar meus estudos do livro data science do zero com código de exemplos e anotações
             em .md</p>
+          <div class="project-tags">
+            <span class="badge">Python</span>
+            <span class="badge">Data Science</span>
+            <span class="badge">Estudos</span>
+          </div>
         </a>
       </div>
     </section>
   </main>
-
-  <footer>
+  <button class="back-to-top" aria-label="Voltar ao topo">↑</button>
+  <footer class="reveal">
     &copy; 2025 Alex de Abreu
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

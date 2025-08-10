@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CV - Alex de Abreu</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Currículo de Alex de Abreu - Desenvolvedor de Sistemas / Data Engineer Jr." />
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="cv.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Alex de Abreu</h1>
+            <p class="tagline">Desenvolvedor de Sistemas • Data Engineer Jr.</p>
+            <div class="contact">
+                <a href="mailto:alex.abreu.softwaredeveloper@gmail.com">Email</a>
+                <a href="https://github.com/AlexAbreuGomes" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/alexdeabreu/" target="_blank" rel="noopener">LinkedIn</a>
+                <span>Natal / RN - Brasil</span>
+            </div>
+            <div class="actions-print no-print">
+                <button type="button" onclick="window.print()" aria-label="Gerar PDF do currículo">Gerar PDF</button>
+            </div>
+        </header>
+
+        <section>
+            <h2>Resumo</h2>
+            <p>Desenvolvedor focado em back-end, automação e dados. Experiência Básica com erp Odoo,
+                construção de integrações e orquestração de pipelines com mentalidade orientada a valor e qualidade
+                sustentável.</p>
+        </section>
+
+        <div class="split">
+            <div>
+                <section>
+                    <h2>Experiência</h2>
+                    <div class="meta"><span class="role">Analista de Sistemas</span>
+                        <span class="company">E-Masters Tecnologia</span>
+                        <span class="date-range">2024–Atual</span>
+                    </div>
+                    <ul>
+                        <li>Criação de modulos para Odoo.</li>
+                        <li>Automação de processos de dados (DAGs / integrações).</li>
+                        <li>Otimização de consultas SQL e estruturação de dados.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Projetos Selecionados</h2>
+                    <p><strong>Conecta Aprendiz</strong> – App colaborativo com quiz e dicas para aprendizes.</p>
+                    <p><strong>Meu Acompanhante Seguro</strong> – Site educativo sobre segurança em ambiente hospitalar.
+                    </p>
+                    <p><strong>Parking System</strong> – Sistema desktop para controle de estacionamentos.</p>
+                </section>
+            </div>
+            <div>
+                <section>
+                    <h2>Tecnologias</h2>
+                    <ul class="inline-list">
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>PostgreSQL</li>
+                        <li>JavaScript</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Airflow</li>
+                        <li>Odoo</li>
+                        <li>Git</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Formação</h2>
+                    <p><strong>Desenvolvimento de Sistemas</strong><br />
+                        Senac-RN / Técnico em desenvolvimento de sistemas</p>
+                </section>
+                <section>
+                    <h2>Idiomas</h2>
+                    <p>Português (Nativo) • Inglês (básico)</p>
+                </section>
+            </div>
+        </div>
+
+        <section>
+            <h2>Foco Atual</h2>
+            <ul>
+                <li>Boas práticas de modelagem e performance em bancos.</li>
+                <li>Orquestração de dados (Airflow) e integrações ERP.</li>
+                <li>Automação de rotinas e qualidade de código.</li>
+            </ul>
+        </section>
+
+        <p class="generated" style="margin-top:40px;font-size:.7rem;color:var(--c-muted);">Documento gerado em: <span
+                id="cv-date"></span></p>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
