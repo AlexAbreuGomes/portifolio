@@ -5,7 +5,7 @@
 
 /* Fonte principal */
 body {
-  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
   margin: 0;
   background: #f4f4f9;
   color: #222;
@@ -159,17 +159,42 @@ section p {
   border-radius: 10px;
   padding: 18px 20px;
   box-shadow: 0 2px 10px rgba(79, 140, 255, 0.15);
-  transition: box-shadow 0.3s ease;
-
-  /* Ajuste para deixar o botão no fim */
+  transition: box-shadow 0.3s ease, transform 0.25s ease,
+    background-color 0.25s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
+  text-decoration: none; /* remove sublinhado do link */
+  color: inherit; /* mantém a cor do texto */
+  position: relative;
+  overflow: hidden;
 }
 
-.project-card:hover {
-  box-shadow: 0 4px 20px rgba(55, 107, 219, 0.4);
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 255, 255, 0.4),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card:hover,
+.project-card:focus-visible {
+  box-shadow: 0 6px 24px rgba(55, 107, 219, 0.45);
+  transform: translateY(-4px);
+  background-color: #dae4ff;
+}
+
+.project-card:hover::after,
+.project-card:focus-visible::after {
+  opacity: 1;
 }
 
 .project-card h3 {
@@ -180,20 +205,18 @@ section p {
 
 .project-card p {
   flex-grow: 1;
-  margin-bottom: 16px;
+  margin: 0;
 }
 
+.project-card:focus-visible {
+  outline: 3px solid #2a5dff;
+  outline-offset: 2px;
+}
+
+/* Remove estilos antigos de link dentro do card que não são mais necessários */
 .project-card a {
-  margin-top: auto;
-  align-self: flex-start;
-  color: #2a5dff;
-  font-weight: 600;
+  /* caso exista algum no futuro */
   text-decoration: none;
-}
-
-.project-card a:hover,
-.project-card a:focus {
-  text-decoration: underline;
 }
 
 /* Footer */
