@@ -30,3 +30,19 @@
         setTimeout(() => window.print(), 400);
     }
 })();
+
+// Menu móvel
+(function () {
+    const nav = document.querySelector('.site-nav');
+    const botao = document.querySelector('.nav-toggle');
+    const links = document.querySelectorAll('.nav-links a');
+    if (!nav || !botao) return;
+    const fechar = () => { nav.classList.remove('open'); botao.setAttribute('aria-expanded', 'false'); document.body.classList.remove('menu-open'); };
+    botao.addEventListener('click', () => {
+        const aberto = botao.getAttribute('aria-expanded') === 'true';
+        if (aberto) { fechar(); }
+        else { nav.classList.add('open'); botao.setAttribute('aria-expanded', 'true'); document.body.classList.add('menu-open'); }
+    });
+    links.forEach(l => l.addEventListener('click', fechar));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fechar(); });
+})();

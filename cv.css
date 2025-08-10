@@ -167,6 +167,68 @@ li {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 600px) {
+  main {
+    padding: 32px 22px 40px;
+    margin: 20px 0 40px;
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  .tagline {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+  p,
+  li {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+  ul {
+    margin-left: 18px;
+  }
+  .inline-list {
+    gap: 6px;
+  }
+  .inline-list li {
+    font-size: 0.55rem;
+    padding: 5px 10px 4px;
+  }
+  .contact {
+    gap: 10px;
+    font-size: 0.78rem;
+  }
+  .contact a {
+    word-break: break-word;
+  }
+  .split {
+    gap: 26px;
+  }
+  .actions-print {
+    margin: 8px 0 20px;
+  }
+}
+@media (max-width: 420px) {
+  h1 {
+    font-size: 1.55rem;
+  }
+  main {
+    padding: 26px 18px 34px;
+  }
+  .inline-list li {
+    font-size: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+  h2::after {
+    width: 46px;
+  }
+}
 @media print {
   body {
     background: #fff;
