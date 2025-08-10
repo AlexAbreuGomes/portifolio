@@ -867,6 +867,10 @@ footer {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(14px);
     min-height: calc(100vh - 58px);
+    max-height: calc(100vh - 58px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   }
   .site-nav {
     position: sticky;
